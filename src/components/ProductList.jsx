@@ -43,32 +43,6 @@ const agregarAlCarrito = (productoNuevo) => {
   setMensaje(`✅ ${productoNuevo.nombre} agregado al carrito`);
   setTimeout(() => setMensaje(''), 2000);
 };
-
-//   const agregarAlCarrito = (productoNuevo) => {
-//   setCarrito(prevCarrito => {
-//     const index = prevCarrito.findIndex(p => p.id === productoNuevo.id);
-
-//     if (index !== -1) {
-//       const copia = [...prevCarrito];
-//       copia[index].cantidad += 1;
-//       return copia;
-//     } else {
-//       return [
-//         ...prevCarrito,
-//         {
-//           id: productoNuevo.id,
-//           nombre: productoNuevo.nombre,
-//           precio: productoNuevo.precio,
-//           imagen: productoNuevo.imagen,
-//           cantidad: 1
-//         }
-//       ];
-//     }
-//   });
-//   setMensaje(`✅ ${productoNuevo.nombre} agregado al carrito`);
-//   setTimeout(() => setMensaje(''), 2000);
-// };
-
   const productosFiltrados = productos.filter(p =>
     p.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );

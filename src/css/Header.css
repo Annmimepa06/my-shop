@@ -59,6 +59,22 @@ body {
   background-color: #f9f9f9;
 }
 
+.boton-cantidad {
+  margin: 0 4px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.boton-cantidad:hover {
+  transform: scale(1.15);
+  background-color: #c9c9c9;
+}
+
 .container-icon {
 	position: relative;
 }

@@ -14,7 +14,23 @@ export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
       }
     });
   };
+  const incrementarCantidad = (index) => {
+  setCarrito(prev => {
+    const copia = [...prev];
+    copia[index].cantidad += 1;
+    return copia;
+  });
+};
 
+const decrementarCantidad = (index) => {
+  setCarrito(prev => {
+    const copia = [...prev];
+    if (copia[index].cantidad > 1) {
+      copia[index].cantidad -= 1;
+    }
+    return copia;
+  });
+};
   return (
     <>
       <div className="hero-banner">
@@ -44,9 +60,11 @@ export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
               carrito.map((producto, idx) => (
                 <li key={idx}>
                   {producto.nombre}
-                  <span className="cantidad-producto-carrito">
-                    x{producto.cantidad}
-                  </span>
+                  <div className="cantidad-producto-carrito">
+                   <button onClick={() => decrementarCantidad(idx)} className="boton-cantidad">➖</button>
+                  <span>{producto.cantidad}</span>
+                 <button onClick={() => incrementarCantidad(idx)} className="boton-cantidad">➕</button>
+                </div>
                   <span className="precio-producto-carrito">
                     ${producto.precio * producto.cantidad}
                   </span>
