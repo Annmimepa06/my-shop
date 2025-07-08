@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Header from './components/Header.jsx';
+import useLocalStorage from './hooks/useLocalStorage.js';
 
 function App() {
-  const [carrito, setCarrito] = useState([]);
+  const [carrito, setCarrito] = useLocalStorage([]);
   const [busqueda, setBusqueda] = useState(''); 
 
   return (
@@ -13,7 +14,6 @@ function App() {
   );
 }
 export default App;
-
 
 
 
