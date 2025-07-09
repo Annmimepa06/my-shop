@@ -128,17 +128,20 @@ body {
 
 .titulo-producto-carrito {
 	font-size: 20px;
+  color: #000;
 }
 
 .precio-producto-carrito {
 	font-weight: 700;
 	font-size: 20px;
 	margin-left: 10px;
+  color: #000;
 }
 
 .cantidad-producto-carrito {
 	font-weight: 400;
 	font-size: 20px;
+  color: #000;
 }
 
 .icon-close {
@@ -159,6 +162,7 @@ background: transparent;
 	align-items: center;
 	padding: 20px 0;
 	gap: 20px;
+  color: #000;
 }
 
 .total-pagar {

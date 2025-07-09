@@ -20,8 +20,10 @@
   border: 1px solid #3e45ff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  background-color: azure;
+  background-color: rgb(40, 54, 54);
+  color: #ffffff;
 }
+
 .product-grid {
   display: grid;
   gap: 30px;
@@ -37,6 +39,7 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.06);
   transition: transform 0.2s;
+  color: black
 }
 
 .product-card:hover {
