@@ -57,6 +57,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   background-color: #f9f9f9;
+  color: #000;
 }
 
 .boton-cantidad {
@@ -118,12 +119,14 @@ body {
   margin-bottom: 10px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 8px;
+  color: #000;
 }
 
 .info-cart-product {
 	display: flex;
 	justify-content: space-between;
 	flex: 0.8;
+  color: #000;
 }
 
 .titulo-producto-carrito {
