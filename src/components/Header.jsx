@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/Header.css';
 import ProductList from "./ProductList";
+import SearchBar from './SearchBar';
 
 export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
   const eliminarProducto = (indexAEliminar) => {
@@ -39,14 +40,15 @@ const decrementarCantidad = (index) => {
 
       <div className="main-content">
         <div className="contenido-principal">
-          {/* 🔍 Input de búsqueda */}
+          <SearchBar valor={busqueda} actualizar={setBusqueda} />
+          {/* 🔍 Input de búsqueda
           <input
             type="text"
             placeholder="Buscar producto..."
             className="barra-busqueda"
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
-          />
+          /> */}
           
           <ProductList setCarrito={setCarrito} busqueda={busqueda} />
         </div>

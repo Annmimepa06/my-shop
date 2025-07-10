@@ -53,12 +53,6 @@ const agregarAlCarrito = (productoNuevo) => {
       <h2 className="section-title">LISTADO DE PRODUCTOS</h2>
      {mensaje && <NotificationMessage texto={mensaje} />}
 
-     
-      {/* {mensaje && (
-  <div className="notificacion">
-    {mensaje}
-  </div>
-)} */}
       <div className="product-grid">
         {productosFiltrados.map(producto => (
           <div key={producto.id} className="product-card">
