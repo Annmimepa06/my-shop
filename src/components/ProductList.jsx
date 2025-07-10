@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/ProductList.css';
 import { useState } from 'react';
+import NotificationMessage from "./NotificationMessage.jsx";
 
 export default function ProductList({ setCarrito, busqueda }) {
   const productos = [
@@ -50,11 +51,14 @@ const agregarAlCarrito = (productoNuevo) => {
   return (
     <section className="product-section">
       <h2 className="section-title">LISTADO DE PRODUCTOS</h2>
-      {mensaje && (
+     {mensaje && <NotificationMessage texto={mensaje} />}
+
+     
+      {/* {mensaje && (
   <div className="notificacion">
     {mensaje}
   </div>
-)}
+)} */}
       <div className="product-grid">
         {productosFiltrados.map(producto => (
           <div key={producto.id} className="product-card">
