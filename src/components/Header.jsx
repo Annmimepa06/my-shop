@@ -5,6 +5,7 @@ import SearchBar from './SearchBar';
 import CartItem from './CartItem';
 import CartTotal from './CartTotal';
 import HeroBanner from "./HeroBanner";
+import EmptyCartMessage from "./EmptyCartMessage";
 
 export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
   const eliminarProducto = (indexAEliminar) => {
@@ -48,16 +49,14 @@ const decrementarCantidad = (index) => {
         <div className="carrito-lateral">
           <h2>CARRITO 🛒</h2>
           <ul>
-            {carrito.length === 0 ? (
-         <p>El carrito está vacío</p>
-          ) : (
-          carrito.map((producto, idx) => (
-           <CartItem
+           {carrito.length === 0 ? <EmptyCartMessage /> : (
+            carrito.map((producto, idx) => (
+          <CartItem
           key={idx}
-          producto={producto}
-          onIncrementar={() => incrementarCantidad(idx)}
-          onDecrementar={() => decrementarCantidad(idx)}
-          onEliminar={() => eliminarProducto(idx)}
+           producto={producto}
+            onIncrementar={() => incrementarCantidad(idx)}
+            onDecrementar={() => decrementarCantidad(idx)}
+            onEliminar={() => eliminarProducto(idx)}
     />
   ))
 )}
