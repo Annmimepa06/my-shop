@@ -5,6 +5,7 @@ import SearchBar from './SearchBar';
 import CartItem from './CartItem';
 import CartTotal from './CartTotal';
 
+
 export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
   const eliminarProducto = (indexAEliminar) => {
     setCarrito(prev => {
