@@ -4,7 +4,7 @@ import ProductList from "./ProductList";
 import SearchBar from './SearchBar';
 import CartItem from './CartItem';
 import CartTotal from './CartTotal';
-
+import HeroBanner from "./HeroBanner";
 
 export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
   const eliminarProducto = (indexAEliminar) => {
@@ -37,9 +37,9 @@ const decrementarCantidad = (index) => {
 };
   return (
     <>
-      <div className="hero-banner">
+      {/* <div className="hero-banner">
         <h1 className="hero-title">M  E  D  E  X  I  A</h1>
-      </div>
+      </div> */}
 
       <div className="main-content">
         <div className="contenido-principal">
