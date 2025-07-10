@@ -37,10 +37,7 @@ const decrementarCantidad = (index) => {
 };
   return (
     <>
-      {/* <div className="hero-banner">
-        <h1 className="hero-title">M  E  D  E  X  I  A</h1>
-      </div> */}
-
+      <HeroBanner />
       <div className="main-content">
         <div className="contenido-principal">
           <SearchBar valor={busqueda} actualizar={setBusqueda} />
