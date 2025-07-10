@@ -3,6 +3,7 @@ import '../css/Header.css';
 import ProductList from "./ProductList";
 import SearchBar from './SearchBar';
 import CartItem from './CartItem';
+import CartTotal from './CartTotal';
 
 export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
   const eliminarProducto = (indexAEliminar) => {
@@ -63,15 +64,9 @@ const decrementarCantidad = (index) => {
   ))
 )}
           </ul>
-
           {carrito.length > 0 && (
-            <div className="cart-total">
-              <h3>Total:</h3>
-              <span className="total-pagar">
-                ${carrito.reduce((total, p) => total + p.precio * p.cantidad, 0)}
-              </span>
-            </div>
-          )}
+           <CartTotal carrito={carrito} />
+      )}
         </div>
       </div>
     </>
