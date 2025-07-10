@@ -6,6 +6,7 @@ import CartItem from './CartItem';
 import CartTotal from './CartTotal';
 import HeroBanner from "./HeroBanner";
 import EmptyCartMessage from "./EmptyCartMessage";
+import { Link } from "react-router-dom";
 
 export default function Header({ carrito, setCarrito, busqueda, setBusqueda }) {
   const eliminarProducto = (indexAEliminar) => {
