@@ -31,7 +31,7 @@ body {
 .main-content {
   margin-top: 100px; 
   max-width: none;
-  display: inline-flex; /*Aqui para editar el espacio del contenido*/
+  display: inline-flex; 
   align-items: flex-start;
   justify-content: space-between;
   padding: 20px;
