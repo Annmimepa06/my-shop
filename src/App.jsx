@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
-import CartView from './components/CartView'; 
+import CartView from './components/CartView';
 import useLocalStorage from './hooks/useLocalStorage';
 import { useState } from 'react';
 
@@ -11,25 +11,33 @@ function App() {
 
   return (
     <Router>
-      <Header
-        carrito={carrito}
-        setCarrito={setCarrito}
-        busqueda={busqueda}
-        setBusqueda={setBusqueda}
-      />
       <Routes>
-        <Route path="/" element={
-          <ProductList
-            setCarrito={setCarrito}
-            busqueda={busqueda}
-          />
-        } />
-        <Route path="/carrito" element={
-          <CartView
-            carrito={carrito}
-            setCarrito={setCarrito}
-          />
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <Header
+                carrito={carrito}
+                setCarrito={setCarrito}
+                busqueda={busqueda}
+                setBusqueda={setBusqueda}
+              />
+              <ProductList
+                setCarrito={setCarrito}
+                busqueda={busqueda}
+              />
+            </>
+          }
+        />
+        <Route
+          path="/carrito"
+          element={
+            <CartView
+              carrito={carrito}
+              setCarrito={setCarrito}
+            />
+          }
+        />
       </Routes>
     </Router>
   );
