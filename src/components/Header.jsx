@@ -1,6 +1,5 @@
 import React from "react";
 import '../css/Header.css';
-import ProductList from "./ProductList";
 import SearchBar from './SearchBar';
 import CartItem from './CartItem';
 import CartTotal from './CartTotal';
@@ -43,8 +42,6 @@ const decrementarCantidad = (index) => {
       <div className="main-content">
         <div className="contenido-principal">
           <SearchBar valor={busqueda} actualizar={setBusqueda} />
-          
-          <ProductList setCarrito={setCarrito} busqueda={busqueda} />
         </div>
 
         <div className="carrito-lateral">
